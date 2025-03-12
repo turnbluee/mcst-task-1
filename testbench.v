@@ -3,12 +3,12 @@ module testbench;
     parameter POS_W = 4;
     reg clk;
     reg rst;
-    reg [DATA_W-1:0] in;
-    wire [POS_W-1:0] out;
+    reg [DATA_W-1:0] data;
+    wire [POS_W-1:0] sum;
 
     vec_sum #(.DATA_W(DATA_W), .POS_W(POS_W)) example (
-        .data(in),
-        .sum(out),
+        .data(data),
+        .sum(sum),
         .clock(clk),
         .reset(rst)
     );
@@ -17,14 +17,14 @@ module testbench;
 
     initial begin
 
-        clk <= 0;
+        clk <= 1;
         rst <= 1;
-        in <= 0;
+        data <= 0;
 
-        #1;
+        #2;
 
         rst <= 0;
-        in = 16'b1001101010100011;
+        data = 16'b1001101010100011;
 
         #6;
 
@@ -33,9 +33,19 @@ module testbench;
         #2;
 
         rst <= 0;
-        in = 16'b0010101111010111;
+        data = 16'b0010101111010111;
 
         #6;
+
+        rst <= 1;
+
+        #2;
+
+        rst <= 0;
+        data = 16'b1110101010001110;
+
+        #6;
+
         $finish;
     end
     `include "dump_settings.v"
