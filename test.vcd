@@ -1,0 +1,83 @@
+$date
+	Thu Mar 13 02:41:08 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var parameter 32 ! DATA_W $end
+$var parameter 32 " POS_W $end
+$var reg 10 # num [9:0] $end
+$scope module serial $end
+$var wire 10 $ data [9:0] $end
+$var wire 4 % sum [3:0] $end
+$var parameter 32 & DATA_W $end
+$var parameter 32 ' POS_W $end
+$scope begin genblk1[0] $end
+$var parameter 2 ( i $end
+$upscope $end
+$scope begin genblk1[1] $end
+$var parameter 2 ) i $end
+$upscope $end
+$scope begin genblk1[2] $end
+$var parameter 3 * i $end
+$upscope $end
+$scope begin genblk1[3] $end
+$var parameter 3 + i $end
+$upscope $end
+$scope begin genblk1[4] $end
+$var parameter 4 , i $end
+$upscope $end
+$scope begin genblk1[5] $end
+$var parameter 4 - i $end
+$upscope $end
+$scope begin genblk1[6] $end
+$var parameter 4 . i $end
+$upscope $end
+$scope begin genblk1[7] $end
+$var parameter 4 / i $end
+$upscope $end
+$scope begin genblk1[8] $end
+$var parameter 5 0 i $end
+$upscope $end
+$scope begin genblk1[9] $end
+$var parameter 5 1 i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1001 1
+b1000 0
+b111 /
+b110 .
+b101 -
+b100 ,
+b11 +
+b10 *
+b1 )
+b0 (
+b100 '
+b1010 &
+b100 "
+b1010 !
+$end
+#0
+$dumpvars
+b10 %
+b1010 $
+b1010 #
+$end
+#5
+b100 %
+b1111 #
+b1111 $
+#10
+b10 %
+b1001 #
+b1001 $
+#15
